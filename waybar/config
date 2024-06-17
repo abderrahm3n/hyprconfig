@@ -1,0 +1,75 @@
+{
+	"layer": "top",
+	"width": 1366,
+	"height": 15,
+	"margin-bottom":0,
+	"margin-top":0,
+	"modules-left":["cpu","memory","network","hyprland/workspaces"],
+	"modules-center":["clock"],
+	"modules-right":["pulseaudio","backlight"],
+	
+	"hyprland/workspaces": {
+		"sort-by-name": true,
+		"on-click": "activate"
+	},
+
+	"hyprland/window": {
+		"max-length": 50,
+		"separate-outputs": true
+	},
+	"clock": {
+		"locale": "C", 
+		"format": " {:%I:%M %p}",
+		"format-alt": " {:%a,%b %d}" // Icon: calendar-alt
+	},
+	"cpu": {
+		"format": "&#8239;  {usage}%",
+		"tooltip": false,
+		"on-click": "foot -e 'htop'"
+	},
+	"memory": {
+    		"interval": 30,
+    		"format": "    {used:0.2f}GB",
+    		"max-length": 10,
+    		"tooltip": false,
+    		"warning": 70,
+    		"critical": 90
+	},
+	"network": {
+		"interval": 2,
+		"format-wifi": "    {signalStrength}%",
+		"format-ethernet":   "",
+		"format-linked": "   {ipaddr}",
+		"format-disconnected": "   Disconnected",
+		"format-disabled": "  ",
+		"tooltip": false,
+		"max-length": 23,
+		"min-length": 6,
+		"format-alt": "{essid}",
+	},
+	"backlight": {
+    // "device": "acpi_video1",
+    "format": "{icon}&#8239;{percent}%",
+    "format-icons": ["", ""],
+},
+"pulseaudio": {
+  // "scroll-step": 1, // %, can be a float
+  "format": "{icon} {volume}% {format_source}",
+  "format-bluetooth": "{icon} {volume}% {format_source}",
+  "format-bluetooth-muted": " {format_source}",
+  "format-muted": "  {format_source}",
+  "format-source": " {volume}%",
+  "format-source-muted": "",
+  "format-icons": {
+    "headphone": "",
+    "hands-free": "",
+    "headset": "🎧",
+    "phone": "",
+    "portable": "",
+    "car": "",
+    			"default": ["", "", ""]
+  		},
+  		"on-click": "pavucontrol"
+	},
+}
+

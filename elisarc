@@ -1,0 +1,11 @@
+[ElisaFileIndexer]
+RootPath[$e]=$HOME/Downloads
+
+[UiSettings]
+ColorScheme=
+
+[Views]
+ColorScheme=Default
+InitialFilesViewPath=/home/abderrahm3n/Downloads/qira
+SortOrderPreferences=Track==AscendingOrder
+SortRolePreferences=Track==FileModificationTime
